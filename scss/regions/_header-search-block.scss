@@ -44,8 +44,8 @@
 				//display: none;
 				position: absolute;
 				z-index: 3;
-				left: 5rem;
-				top: .9rem;
+				left: 39px;
+				//top: .9rem;
 				opacity: 0;
 				display: none;
 				//@include grid-child-column (2, 3);
@@ -74,6 +74,10 @@
 						    min-width: 16rem;
 						    position: relative;
 						    
+						    @media only screen and (max-width: $mobile-l-width){
+								min-width: initial;
+							}
+						    
 						    fieldset{
 							    padding: 0;
 							    display: inline-block;
@@ -82,20 +86,24 @@
 							    
 							    label.sr-only{
 								    content:"";
-									width: 24px;
-									height: 24px;
-									left: -2.1rem;
-									top: 0.5rem;
+									width: 18px;
+									height:18px;
+									right: -134px;
+									top: 7px;
 									position: relative;
 									pointer-events:  all;
 									cursor: pointer;
 									color: $color_light_grey;
 									
+									@media only screen and (max-width: $mobile-l-width){
+										left: -25px;
+									}
+									
 									&:after{
 										content:"";
 									    background: url(../images/icons/close-green.svg);
-										width: 24px;
-										height: 24px;
+										width: 18px;
+										height: 18px;
 										background-repeat: no-repeat;
 										background-size: contain;
 										left: 0;
@@ -110,6 +118,11 @@
 							    input{
 									margin-top: -1.7rem;
 								    @include fieldset-field;
+								    
+								    @media only screen and (max-width: $mobile-l-width){
+										padding: 0.4rem 0.5rem 0.4rem 0.5rem;
+									}
+									
 							    }
 							    
 						    }
@@ -118,7 +131,13 @@
 							    margin: 0;
 								padding: 0;
 								position: absolute;
-								right: 0;
+								right: -20px;
+								top: -3px;
+								
+								@media only screen and (max-width: $mobile-l-width){
+									left: 0;
+									top: initial;
+								}
 							    
 							    button{
 								    @include buton-s-green;

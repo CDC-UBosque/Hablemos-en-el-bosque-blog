@@ -118,3 +118,24 @@
 	}
 	
 }
+
+.overlay-menu{
+	
+	.header{
+	
+		.navbar#navbar-main{
+			
+			.container{
+				
+				.navbar-toggler-icon{
+					background: url(../images/icons/close-green.svg);
+					background-repeat: no-repeat;
+					background-size: 28px 24px;
+				}
+				
+			}
+		
+		}
+		
+	}
+}
