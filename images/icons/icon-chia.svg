@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="51" height="34" viewBox="0 0 51 34">
+  <defs>
+    <polygon id="icon-chia-a" points=".156 .607 .756 .607 .756 .143 .156 .143 .156 .607"/>
+    <polygon id="icon-chia-c" points=".413 .607 25.56 .607 25.56 .143 .413 .143"/>
+    <polygon id="icon-chia-e" points=".484 .607 1.084 .607 1.084 .143 .484 .143 .484 .607"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <g transform="translate(3.6 .46)">
+      <g transform="translate(3.6 32.179)">
+        <mask id="icon-chia-b" fill="#fff">
+          <use xlink:href="#icon-chia-a"/>
+        </mask>
+        <path stroke="#44492A" stroke-linecap="round" stroke-linejoin="round" stroke-width=".917" d="M0.15588,0.143467857 L0.16548,0.143467857" mask="url(#icon-chia-b)"/>
+      </g>
+      <g transform="translate(7.2 32.179)">
+        <mask id="icon-chia-d" fill="#fff">
+          <use xlink:href="#icon-chia-c"/>
+        </mask>
+        <path stroke="#44492A" stroke-dasharray=".019 3.848" stroke-linecap="round" stroke-linejoin="round" stroke-width=".917" d="M0.4134,0.143467857 L25.56,0.143467857" mask="url(#icon-chia-d)"/>
+      </g>
+      <g transform="translate(34.2 32.179)">
+        <mask id="icon-chia-f" fill="#fff">
+          <use xlink:href="#icon-chia-e"/>
+        </mask>
+        <path stroke="#44492A" stroke-linecap="round" stroke-linejoin="round" stroke-width=".917" d="M0.48372,0.143467857 L0.49332,0.143467857" mask="url(#icon-chia-f)"/>
+      </g>
+      <polyline stroke="#44492A" stroke-linecap="round" stroke-linejoin="round" stroke-width=".6" points="4.083 29.862 4.083 .451 7.574 3.103 7.574 29.862"/>
+      <polyline stroke="#44492A" stroke-linecap="round" stroke-linejoin="round" stroke-width=".6" points="4.083 29.862 4.083 .451 .59 3.103 .59 29.862"/>
+    </g>
+    <polygon stroke="#44492A" stroke-linecap="round" stroke-linejoin="round" stroke-width=".6" points="14.263 28.303 15.991 28.303 15.991 18.16 14.263 18.16"/>
+    <polygon stroke="#44492A" stroke-linecap="round" stroke-linejoin="round" stroke-width=".6" points="37.444 28.303 39.172 28.303 39.172 18.16 37.444 18.16"/>
+    <path stroke="#44492A" stroke-linecap="round" stroke-linejoin="round" stroke-width=".6" d="M15.12774 18.1606143L15.12774 15.7520786M38.30742 18.1606143L38.30742 15.7520786M13.725 15.7522L39.9798 15.7522"/>
+    <polyline stroke="#44492A" stroke-linecap="round" stroke-linejoin="round" stroke-width=".6" points="18.335 28.304 42.012 28.304 43.445 30.322 50.456 30.322"/>
+    <polygon stroke="#44492A" stroke-linecap="round" stroke-linejoin="round" stroke-width=".6" points="20.996 28.303 31.852 28.303 31.852 18.16 20.996 18.16"/>
+    <path stroke="#44492A" stroke-linecap="round" stroke-linejoin="round" stroke-width=".6" d="M23.13162,30.3215643 L0.29982,30.3215643"/>
+    <path stroke="#44492A" stroke-dasharray=".019 3.88" stroke-linecap="round" stroke-linejoin="round" stroke-width=".917" d="M5.25936 4.78950714L5.25936 28.6113643M10.06056 4.78950714L10.06056 28.6113643M6.49104 3.69944286L6.49104 28.6117286M8.83362 3.69944286L8.83362 28.6117286"/>
+    <path stroke="#44492A" stroke-linecap="round" stroke-linejoin="round" stroke-width=".6" d="M26.42346,19.8981357 L26.42346,27.1364929"/>
+    <path stroke="#44492A" stroke-dasharray=".019 3.88" stroke-linecap="round" stroke-linejoin="round" stroke-width=".917" d="M15.99138,14.0134643 L36.57798,14.0134643"/>
+  </g>
+</svg>

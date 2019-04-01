@@ -1,0 +1,70 @@
+/* ---------------------------------- header styles -----------------------------
+	------------------------------------------------------------------------------- */
+	
+.header{
+    position: sticky;
+    top: -50px;
+	z-index: 14;
+	
+	.navbar#navbar-top{
+		background: $color_brand;
+		padding: 0.3rem 1rem;
+		
+		.container{
+			padding: 0;
+			max-width: 1170px;
+			//justify-content: center;
+			
+			.row{
+				margin: 0;
+				
+				.logo-u-block{
+					margin-right: .5rem;
+					position: absolute;
+					z-index: 1;
+					max-width: 50px;
+					height: auto;
+					top: 0;
+					
+					img{
+						margin: 0;
+						@include prefix(box-shadow, none, webkit moz);
+						@include prefix(border-radius, 0, webkit moz);
+					}
+					
+				}
+				
+				.ir-a-ueb-block{
+					margin-left: 3.5rem;
+				}
+				
+				p{
+					margin: 0;
+					
+					a{
+						@include return_header_link_text ();
+						@include line-hover-after($color_brand_white);
+						padding-left: 1rem;
+						
+						&:before{
+							content: "";
+							position: absolute;
+							background: url('../images/icons/arrow-left.svg');
+							width: 6px;
+							height: 10px;
+							background-repeat: no-repeat;
+							background-size: contain;
+							left: 0;
+						}
+						
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}

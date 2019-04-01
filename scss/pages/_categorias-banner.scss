@@ -1,0 +1,34 @@
+/* ---------------------------------- categorias banners -----------------------------
+	------------------------------------------------------------------------------- */
+	
+.path-categoria{
+	
+	.highlighted{
+		
+		.content{
+			
+			.field--name-field-imagen-cabezote{
+				max-width: 970px;
+				margin: auto;
+				@include bg-laterales($color_light_grey, $width: 100%);
+				
+				&:after,
+				&:before{
+					height: 50%;
+				}
+				
+				img{
+					@include prefix(box-shadow, none, webkit moz);
+				}
+			
+			}
+			
+			.field--name-field-texto-cabezote{
+				display: none;
+			}
+			
+		}
+		
+	}
+	
+}

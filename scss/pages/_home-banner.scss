@@ -1,0 +1,272 @@
+/* ---------------------------------- home banners -----------------------------
+	------------------------------------------------------------------------------- */
+	
+.path-frontpage{
+	
+	.highlighted{
+		background: $color_light_grey;
+		padding: 2rem 2rem 3rem;
+		
+		@media only screen and (max-width: $breakpoint_4){
+			padding: 2rem 1rem 3rem;
+		}
+		
+		.categoria-cabezote-home-block{
+			
+			.view-content{
+				
+				.views-row{
+					position: relative;
+					@include display-grid;
+					@include grid-parent-12-columns (1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 6rem, 6rem, 6rem, 6rem, 6rem);
+					
+					@media only screen and (max-width: $breakpoint_3) {
+						@include grid-parent-8-columns (1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr);
+					}
+					
+					@media only screen and (max-width: $breakpoint_4) {
+						@include grid-parent-8-columns (1rem, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1rem);
+					}
+					
+					//
+					// ------------ Create space ------------
+					>div{
+						padding-bottom: .3rem;
+						
+						&:first-child{
+							padding-bottom: 0;
+						}
+						&:nth-child(2){
+							padding-top: 1.5rem;
+						}
+						&:last-child{
+							padding-bottom: 1.5rem;
+						}
+					}
+					
+					//
+					// ------------ Image blog ------------
+					.views-field-field-imagen-del-blog{
+						z-index: 0;
+						position: relative;
+						@include grid-child-column (1, 10);
+						@include grid-child-row (1, 8);
+						
+						@media only screen and (max-width: $breakpoint_3){
+							@include grid-child-column (1, 9);
+							@include grid-child-row (1, 3);
+						}
+						
+						.field-content{
+							height: 100%;
+							
+							a{
+								height: 100%;
+								
+								&:after{
+									display: none;
+								}
+								
+								img{
+									object-fit: cover;
+									height: 100%;
+									min-height: 8rem;
+								}
+								
+							}
+							
+						}
+						
+					}
+					
+					//
+					// ------------ Categoria ------------
+					.views-field-field-categoria{
+						z-index: 1;
+						position: relative;
+						background: $color_brand_white;
+						@include padding-regular;
+						@include grid-child-column (8, 13);
+						@include grid-child-row (2, 3);
+						@include prefix(border-radius, .3rem .3rem 0 0, webkit moz);
+						
+						@media only screen and (max-width: $breakpoint_3){
+							@include grid-child-column (2, 8);
+						}
+						
+						.field-content{
+							@include categoria-entradas_text ();
+						}
+						
+					}
+					
+					//
+					// ------------ Autor ------------
+					.views-field-field-autor-de-la-entrada,
+					.views-field-field-autor-texto{
+						z-index: 1;
+						position: relative;
+						background: $color_brand_white;
+						padding-left: .3rem;
+						padding-right: 2rem;
+						@include padding-mobile;
+						@include grid-child-column (10, 13);
+						@include grid-child-row (3, 4);
+						
+						@media only screen and (max-width: $breakpoint_3){
+							@include grid-child-column (5, 8);
+						}
+						
+						@media only screen and (max-width: $mobile){
+							@include grid-child-column (2, 8);
+							@include grid-child-row (4, 5);
+						}
+						
+						.field-content{
+							padding-top: 6px;
+							@include autor-entradas_text ();
+						}
+						
+					}
+					
+					//
+					// ------------ Creacion ------------
+					.views-field-created{
+						z-index: 1;
+						position: relative;
+						background: $color_brand_white;
+						padding-left: 2rem;
+						padding-right: .3rem;
+						@include padding-mobile;
+						@include grid-child-column (8, 10);
+						@include grid-child-row (3, 4);
+						
+						@media only screen and (max-width: $breakpoint_3){
+							@include grid-child-column (2, 5);
+						}
+						
+						@media only screen and (max-width: $mobile){
+							@include grid-child-column (2, 8);
+						}
+						
+						.field-content{
+							display: inline-block;
+							position: relative;
+							@include categoria-entradas_text ();
+							
+							&:after{
+								position: absolute;
+								content: "";
+								background: #979797;
+								right: -0.9rem;
+								top: 0;
+								width: 1px;
+								height: 100%;
+								
+								@media only screen and (max-width: 575px) {
+									right: -0.4rem;
+								}
+								
+								@media only screen and (max-width: $breakpoint_4){
+									display: none;
+								}
+								
+							}
+							
+						}
+						
+					}
+					
+					//
+					// ------------ Titulo ------------
+					.views-field-title{
+						z-index: 1;
+						position: relative;
+						background: $color_brand_white;
+						@include padding-regular;
+						@include grid-child-column (8, 13);
+						@include grid-child-row (4, 5);
+						
+						@media only screen and (max-width: $breakpoint_3){
+							@include grid-child-column (2, 8);
+						}
+						
+						@media only screen and (max-width: $mobile){
+							@include grid-child-row (5, 6);
+						}
+						
+						.field-content{
+							a{
+								@include titulos_text ();
+							}
+						}
+						
+					}
+					
+					//
+					// ------------ Bocadillo ------------
+					.views-field-field-bocadillo{
+						z-index: 1;
+						position: relative;
+						background: $color_brand_white;
+						@include padding-regular;
+						@include grid-child-column (8, 13);
+						@include grid-child-row (5, 6);
+						
+						@media only screen and (max-width: $breakpoint_3){
+							@include grid-child-column (2, 8);
+						}
+						
+						@media only screen and (max-width: $mobile){
+							@include grid-child-row (6, 7);
+						}
+						
+						.field-content{
+							@include destacados_text ();
+						}
+						
+					}
+					
+					//
+					// ------------ Ver más link ------------
+					.views-field-view-node{
+						z-index: 1;
+						position: relative;
+						background: $color_brand_white;
+						@include padding-regular;
+						@include grid-child-column (8, 13);
+						@include grid-child-row (6, 7);
+						@include prefix(border-radius, 0 0 .3rem .3rem, webkit moz);
+						
+						@media only screen and (max-width: $breakpoint_3){
+							@include grid-child-column (2, 8);
+						}
+						
+						@media only screen and (max-width: $mobile){
+							@include grid-child-row (7, 8);
+						}
+						
+						.field-content{
+							
+							a{
+								@include buton-s-green;
+								
+								&:after{
+									display: none;
+								}
+								
+							}
+							
+						}
+						
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}

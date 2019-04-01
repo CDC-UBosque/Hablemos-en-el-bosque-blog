@@ -1,0 +1,28 @@
+/* ---------------------------------- Menu overlay styles -----------------------------
+	------------------------------------------------------------------------------- */
+
+body{
+	&:before{
+		position: absolute;
+		content: "";
+		background: transparentize($color_gray_80, .2);
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 10;
+		opacity: 0;
+		display: none;
+		@include prefix(transition, all .5s ease-in-out, webkit moz);
+	}
+}
+
+body.overlay-menu{
+	position: relative;
+	
+	&:before{
+		display: block;
+		opacity: 1;
+	}
+	
+}

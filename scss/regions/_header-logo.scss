@@ -1,0 +1,70 @@
+/* ---------------------------------- header styles -----------------------------
+	------------------------------------------------------------------------------- */
+
+.header{
+	
+	.navbar#navbar-main{
+		background: $color_light_grey;
+		padding: 1rem;
+		
+		.container{
+			padding: 0;
+			justify-content: center;
+			max-width: 1170px;
+			position: relative;
+			@include display-grid;
+			@include grid-parent-5-columns (auto, auto, .8fr, auto, 1fr);
+			grid-gap: 1rem;
+			
+			@media only screen and (max-width: $breakpoint_4){
+				justify-items: center;
+				@include grid-parent-4-columns (1fr, auto, auto, 1fr);
+			}
+			
+			//
+			// ------------ Logo U ------------
+			.logo-u-block,
+			.logo-blog-block{
+				@include grid-child-column (4, 5);
+				
+				@media only screen and (max-width: $breakpoint_4){
+					margin-bottom: 1rem;
+					@include grid-child-column (1, 5);
+					@include grid-child-row (1, 1);
+				}
+				
+				.content{
+					position: relative;
+					
+					img{
+						margin: 0;
+						width: 16rem;
+					}
+					
+					.field--name-field-enlace{
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						
+						a{
+							position: absolute;
+							top: 0;
+							left: 0;
+							right: 0;
+							bottom: 0;
+							opacity: 0;
+						}
+						
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}

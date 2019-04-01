@@ -1,0 +1,248 @@
+/* ---------------------------------- header search block styles -----------------------------
+	------------------------------------------------------------------------------- */
+	
+.header{
+	
+	.navbar#navbar-main{
+		
+		.container{
+			
+			//
+			// ------------ Search icon ------------
+			.lupa-block{
+				position: relative;
+				z-index: 2;
+				opacity: 1;
+				cursor: pointer;
+				@include grid-child-column (2, 3 );
+				@include grid-child-row (1, 1);
+				@include prefix(transition, all .1s ease-in-out, webkit moz);
+				
+				@media only screen and (max-width: $breakpoint_3){
+					@include prefix(transition, none, webkit moz);
+				}
+				
+				@media only screen and (max-width: $breakpoint_4){
+					@include grid-child-column (3, 4);
+					@include grid-child-row (2, 2);
+				}
+				
+				img{
+					margin: 0;
+					@include prefix(box-shadow, none, webkit moz);
+				}
+				
+			}
+			
+			.lupa-block.open{
+				opacity: 0;
+			}
+			
+			//
+			// ------------ Search box ------------
+			.search-block{
+				//display: none;
+				position: absolute;
+				z-index: 3;
+				left: 5rem;
+				top: .9rem;
+				opacity: 0;
+				display: none;
+				//@include grid-child-column (2, 3);
+				//@include grid-child-row (1, 1);
+				@include prefix(transition, all .1s ease-in-out, webkit moz);
+				
+				@media only screen and (max-width: $breakpoint_3){
+					@include prefix(transition, none, webkit moz);
+					position: initial;
+				}
+				
+				@media only screen and (max-width: $breakpoint_4){
+					display: none;
+					@include grid-child-column (3, 4);
+					@include grid-child-row (2, 2);
+				}
+				
+				.container-inline{
+					
+					>div {
+						
+						form{
+							display: block;
+						    margin: 0;
+						    flex-wrap: unset;
+						    min-width: 16rem;
+						    position: relative;
+						    
+						    fieldset{
+							    padding: 0;
+							    display: inline-block;
+							    margin: 0;
+							    position: relative;
+							    
+							    label.sr-only{
+								    content:"";
+									width: 24px;
+									height: 24px;
+									left: -2.1rem;
+									top: 0.5rem;
+									position: relative;
+									pointer-events:  all;
+									cursor: pointer;
+									color: $color_light_grey;
+									
+									&:after{
+										content:"";
+									    background: url(../images/icons/close-green.svg);
+										width: 24px;
+										height: 24px;
+										background-repeat: no-repeat;
+										background-size: contain;
+										left: 0;
+										top: 0;
+										position: absolute;
+										pointer-events:  all;
+										cursor: pointer;
+									}
+									
+							    }
+							    
+							    input{
+									margin-top: -1.7rem;
+								    @include fieldset-field;
+							    }
+							    
+						    }
+						    
+						    .form-actions{
+							    margin: 0;
+								padding: 0;
+								position: absolute;
+								right: 0;
+							    
+							    button{
+								    @include buton-s-green;
+								    color: $color_brand;
+									padding: 0.8rem 1.9rem;
+									position: relative;
+									
+									&:hover{
+										color: $color_brand_dark;
+									}
+									
+									&:after{
+										content:"buscar";
+										color: $color_brand_white;
+										position: absolute;
+										left: 32px;
+										top: 13px;
+									}
+									
+							    }
+							    
+						    }
+						    
+						}
+						
+					}
+					
+				}
+				
+			}
+			
+			.search-block.open{
+				display: block;
+				opacity: 1;
+				//margin-right: 2rem;
+			}
+			
+		}
+		
+	}
+	
+}
+
+//
+// adjust styles in responsive
+//
+
+.open-search{
+		
+	.header{
+		
+		.navbar#navbar-main{
+			
+			.container{
+				
+				.navbar-toggler{
+						
+					@media only screen and (max-width: $breakpoint_4){
+						@include grid-child-column (1, 2 );
+					}
+					
+					@media only screen and (max-width: 400px){
+						display: none;
+					}
+					
+				}
+				
+				.logo-blog-block{
+					
+					@media only screen and (max-width: 920px){
+						@include grid-child-column (5, 6 );
+						@include grid-child-row (1, 1);
+					}
+					
+					@media only screen and (max-width: $breakpoint_3){
+						justify-self: end;
+						@include grid-child-column (4, 6 );
+					}
+					
+					@media only screen and (max-width: $breakpoint_4){
+						justify-self: center;
+						@include grid-child-column (2, 4 );
+					}
+					
+				}
+				
+			}
+			
+		}
+			
+	}
+	
+	
+	@media only screen and (max-width: $breakpoint_3){
+		
+		// ------------------------
+		// search box
+		// ------------------------
+		.header{
+			
+			.navbar#navbar-main{
+				
+				.container{
+					
+					.lupa-block{
+						@include prefix(transition, none, webkit moz);
+					}
+					
+					.search-block{
+						@include prefix(transition, none, webkit moz);
+						
+						@media only screen and (max-width: $breakpoint_4){
+							display: block;
+							@include grid-child-column (2, 5);
+						}
+				
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}

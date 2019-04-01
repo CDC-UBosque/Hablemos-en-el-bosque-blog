@@ -1,0 +1,466 @@
+/* ---------------------------------- Blog entrada -----------------------------
+	------------------------------------------------------------------------------- */
+
+.node--type-blog{
+	
+	.layout-main-wrapper{
+		
+		#main{
+			
+			>div{
+				position: relative;
+				@include display-grid;
+				@include grid-parent-2-columns (1fr, 33%);
+				
+				@media only screen and (max-width: $breakpoint_3){
+					@include grid-parent-1-columns (1fr);
+				}
+			
+				.main-content{
+					flex: initial;
+					-ms-flex: initial;
+					max-width: initial;
+					
+					// ------------------------------------------
+					// Info section
+					// ------------------------------------------
+					.section{
+						width: calc(100% + 50%);
+						@include display-grid;
+						@include grid-parent-1-columns (1fr);
+						
+						@media only screen and (max-width: $breakpoint_3){
+							width: 100%;
+						}
+						
+						>div{
+							@include display-grid;
+							@include grid-parent-13-columns (1fr, 1fr, 1fr, 1fr, 1fr, 1fr, auto, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr);
+							
+							// ------------------------------------------
+							// Imagen
+							// ------------------------------------------
+							.field--name-field-imagen-del-blog{
+								margin: 0;
+								float: none;
+								z-index: 1;
+								min-height: 240px;
+								justify-self: baseline;
+								height: 100%;
+								@include grid-child-column (2, 13);
+								@include grid-child-row (1, 5);
+								@include bg-laterales($color_light_grey, $width: 100%);
+				
+								&:after,
+								&:before{
+									height: 50%;
+								}
+								
+								img{
+									margin: 0;
+									object-fit: cover;
+									height: 100%;
+									@include prefix(box-shadow, none, webkit moz);
+								}
+								
+							}
+							
+							// ------------------------------------------
+							// Fecha
+							// ------------------------------------------
+							.field--name-node-post-date{
+								background: $color_brand_dark;
+								padding: 1.5rem 0 1rem 1rem;
+								text-align: left;
+								z-index: 2;
+								position: relative;
+								justify-self: stretch;
+								@include grid-child-column (8, 12);
+								@include grid-child-row (3, 5);
+								@include prefix(border-radius, 0 0.3rem 0 0, webkit moz);
+								@include categoria-entradas_text ();
+								//color: $color_brand_white;
+								
+								@media only screen and (max-width: $breakpoint_3){
+									text-align: center;
+									padding: .4rem 1rem 1rem;
+									@include grid-child-column (3, 12);
+									@include grid-child-row (5, 6);
+									@include prefix(border-radius, 0, webkit moz);
+								}
+								
+							}
+							
+							// ------------------------------------------
+							// Autor
+							// ------------------------------------------
+							.field--name-field-autor-de-la-entrada,
+							.field--name-field-autor-texto{
+								background: $color_brand_dark;
+								padding: 1.5rem 1rem 1rem 0;
+								margin: 0;
+								z-index: 2;
+								text-align: right;
+								position: relative;
+								justify-self: stretch;
+								@include grid-child-column (3, 7);
+								@include grid-child-row (3,5);
+								@include prefix(border-radius, 0.3rem 0 0 0, webkit moz);
+								@include autor-entradas_text ();
+								//color: $color_brand_white;
+								
+								@media only screen and (max-width: $breakpoint_3){
+									text-align: center;
+									padding: 1.5rem 1rem .4rem;
+									@include grid-child-column (3, 12);
+									@include grid-child-row (3, 4);
+									@include prefix(border-radius, 0.3rem 0.3rem 0 0, webkit moz);
+								}
+								
+							}
+							
+							// ------------------------------------------
+							// Categoria
+							// ------------------------------------------
+							.field--name-field-categoria{
+								background: $color_brand_dark;
+								margin: 0;
+								padding: 1.5rem 1rem 1rem; 
+								text-align: center;
+								z-index: 2;
+								position: relative;
+								justify-self: stretch;
+								word-break: break-word;
+								position: relative;
+								@include grid-child-column (7, 8);
+								@include grid-child-row (3, 5);
+								@include categoria-entradas_text ();
+								//color: $color_brand_white;
+								
+								@media only screen and (max-width: $breakpoint_3){
+									padding: .4rem 1rem;
+									@include grid-child-column (3, 12);
+									@include grid-child-row (4, 5);
+								}
+								
+								&:after{
+									position: absolute;
+									content: "";
+									background: $color_gray_60;
+									right: 0;
+									top: 30%;
+									width: 1px;
+									height: 50%;
+								}
+								
+								&:before{
+									position: absolute;
+									content: "";
+									background: $color_gray_60;
+									left: 0;
+									top: 30%;
+									width: 1px;
+									height: 50%;
+								}
+								
+								@media only screen and (max-width: $breakpoint_3){
+									
+									&:after,
+									&:before{
+										display: none;
+									}
+									
+								}
+								
+								.field__item{
+									display: inline-block;
+								}
+								
+							}
+							
+							// ------------------------------------------
+							// Titulo
+							// ------------------------------------------
+							.field--name-node-title{
+								background: $color_brand_dark;
+								padding: .2rem 1rem 1rem;
+								text-align: center;
+								margin-bottom: 0;
+								z-index: 2;
+								position: relative;
+								justify-self: stretch;
+								@include grid-child-column (3, 12);
+								@include grid-child-row (5, 6);
+								@include prefix(border-radius, 0 0 0.3rem 0.3rem, webkit moz);
+								
+								@media only screen and (max-width: $breakpoint_3){
+									@include grid-child-row (6, 7);
+								}
+								
+								h2{
+									@include titulos-entrada_text ();
+									color: $color_brand_white;
+								}
+								
+							}
+							
+							// ------------------------------------------
+							// Body
+							// ------------------------------------------
+							.field--name-body{
+								margin-top: 4rem;
+								@include max-width;
+								@include grid-child-column (1, 9);
+								@include grid-child-row (6, 7);
+								
+								@media only screen and (max-width: $breakpoint_3){
+									@include grid-child-column (1, 14);
+									@include grid-child-row (7, 8);
+								}
+								
+							}
+							
+							// ------------------------------------------
+							// Frase destacado
+							// ------------------------------------------
+							.field--name-field-frase{
+								background: $color_gray_5;
+								padding: 2rem;
+								margin: 1rem 0 2rem;
+								@include grid-child-column (1, 9);
+								@include grid-child-row (7, 8);
+								@include destacados_text ();
+								font-size: $font-destacado-entrada-blog;
+								line-height: $font-destacado-entrada-blog-line;
+								@include max-width;
+								
+								@media only screen and (max-width: $breakpoint_3){
+									@include grid-child-column (1, 14);
+									@include grid-child-row (8, 9);
+								}
+								
+							}
+							
+							// ------------------------------------------
+							// Body 2
+							// ------------------------------------------
+							.field--name-field-conte{
+								@include grid-child-column (1, 9);
+								@include grid-child-row (8, 9);
+								@include max-width;
+								
+								@media only screen and (max-width: $breakpoint_3){
+									@include grid-child-column (1, 14);
+									@include grid-child-row (9, 10);
+								}
+								
+							}
+							
+							// ------------------------------------------
+							// Video
+							// ------------------------------------------
+							.field--type-video{
+								@include grid-child-column (1, 9);
+								@include grid-child-row (9, 10);
+								@include max-width;
+								
+								@media only screen and (max-width: $breakpoint_3){
+									@include grid-child-column (1, 14);
+									@include grid-child-row (10, 11);
+								}
+								
+							}
+							
+							// ------------------------------------------
+							// Body 3
+							// ------------------------------------------
+							.field--name-field-contenido-3{
+								@include grid-child-column (1, 9);
+								@include grid-child-row (10, 11);
+								@include max-width;
+								
+								@media only screen and (max-width: $breakpoint_3){
+									@include grid-child-column (1, 14);
+									@include grid-child-row (11, 12);
+								}
+								
+							}
+							
+							// ------------------------------------------
+							// Galeria
+							// ------------------------------------------
+							.field--name-field-galeria-del-blog{
+								@include grid-child-column (1, 9);
+								@include grid-child-row (11, 12);
+								@include max-width;
+								
+								@media only screen and (max-width: $breakpoint_3){
+									@include grid-child-column (1, 14);
+									@include grid-child-row (13, 14);
+								}
+								
+							}
+							
+							// ------------------------------------------
+							// Autor seccion
+							// ------------------------------------------
+							.field--name-field-autor{
+								margin: 3rem 0;
+								@include grid-child-column (1, 9);
+								@include grid-child-row (12, 13);
+								@include max-width;
+								
+								@media only screen and (max-width: $breakpoint_3){
+									@include grid-child-column (1, 14);
+									@include grid-child-row (14, 15);
+								}
+								
+								>div{
+									
+									&:nth-child(n+2){
+											.field--name-field-palabra-autor{
+													display: none;
+												}
+											
+										}
+								}
+								
+								>div{
+										place-items: center;
+										justify-items: center;
+										//@include display-grid;
+										//@include grid-parent-5-columns (2rem, 1fr, 1fr, 1fr, 2rem);
+										
+										.field--name-field-imagen-del-autor{
+											float: none;
+											margin: 0;
+											@include grid-child-column (2, 5);
+											@include grid-child-row (1, 2);
+											
+											img{
+												margin: 0;
+												@include prefix(border-radius, 100%, webkit moz);
+											}
+											
+										}
+										
+										.field--name-field-palabra-autor{
+											margin: 0.2rem 0 0.5rem;
+											text-align: center;
+											@include grid-child-column (2, 5);
+											@include grid-child-row (2, 3);
+											@include menu-buttons-header_text ();
+										}
+										
+										.field--name-node-title{
+											margin: 0;
+											padding: 0;
+											background: none;
+											@include grid-child-column (2, 5);
+											@include grid-child-row (3, 4);
+											
+											h2{
+												margin: 0.2rem 0 0.5rem;
+												@include titulos-entrada_text ();
+												color: $color-text;
+											}
+											
+										}
+										
+										.field--name-body{
+											margin: 0 auto;
+											text-align: center;
+											@include grid-child-column (2, 5);
+											@include grid-child-row (4, 5);
+											
+											p{
+												font-family: $font-serif-italic;
+												font-size: $font-footer-1;
+												line-height: $font-footer-1-line;
+											}
+											
+										}
+										
+									}
+								
+								.field__label{
+									@include destacados_text ();
+								}
+								
+								/*.field__item{
+									
+									&:nth-child(n+2){
+										
+										>div{
+											
+											.field--name-field-imagen-del-autor{
+												display: none;
+											}
+											
+										}
+										
+									}
+									
+									>div{
+										place-items: center;
+										@include display-grid;
+										@include grid-parent-5-columns (2rem, 1fr, 1fr, 1fr, 2rem);
+										
+										.field--name-field-imagen-del-autor{
+											float: none;
+											margin: 0;
+											@include grid-child-column (2, 5);
+											@include grid-child-row (1, 2);
+											
+											img{
+												margin: 0;
+												@include prefix(border-radius, 100%, webkit moz);
+											}
+											
+										}
+										
+										.field--name-field-palabra-autor{
+											@include grid-child-column (2, 5);
+											@include grid-child-row (2, 3);
+											@include menu-buttons-header_text ();
+										}
+										
+										.field--name-node-title{
+											background: none;
+											@include grid-child-column (2, 5);
+											@include grid-child-row (3, 4);
+											
+											h2{
+												@include titulos-entrada_text ();
+												color: $color-text;
+											}
+											
+										}
+										
+										.field--name-body{
+											margin-top: 0;
+											text-align: center;
+											@include grid-child-column (2, 5);
+											@include grid-child-row (4, 5);
+										}
+										
+									}
+									
+								}*/
+								
+							}
+							
+						}
+						
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}
+

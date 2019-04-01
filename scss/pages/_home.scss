@@ -1,0 +1,27 @@
+/* ---------------------------------- home banners -----------------------------
+	------------------------------------------------------------------------------- */
+	
+.path-frontpage{
+	
+	.layout-main-wrapper{
+		margin: 2rem 0;
+		
+		//
+		// ------------ Hide frontpage text ------------
+		.views-element-container{
+			
+			.view-frontpage{
+				display: none;
+			}
+			
+		}
+		
+		//
+		// ------------ Home 3 columns cards ------------
+		.views-element-container{
+			@include cards-entrada;
+		}
+		
+	}
+	
+}

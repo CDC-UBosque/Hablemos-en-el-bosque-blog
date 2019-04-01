@@ -1,0 +1,82 @@
+/* ---------------------------------- Categorias -----------------------------
+	------------------------------------------------------------------------------- */
+
+.path-categoria{
+	
+	.featured-top{
+		
+		.featured-top__inner{
+			padding: 0 2rem;
+			//margin-top: 2rem;
+			
+			.menu-categorias-block{
+			
+				ul{
+					
+					.nav-item{
+						margin-bottom: 0;
+						
+						&:first-child{
+							
+							a{
+								@include button-s-border-green;
+								margin-top: 15px;
+								
+								&:before{
+									display: none;
+								}
+								
+								&:after{
+									top: 0px;
+									left: 0px;
+								}
+								
+							}
+							
+						}
+						
+						a{
+							@include tabs-blog;
+						}
+						
+					}
+					
+					.nav-item.menu-item--active-trail{
+						
+						a{
+							@include title_tabs_active;
+							
+				            &::before {
+				                opacity: 1;
+				                visibility: visible;
+				            }
+				            
+						}
+						
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+	.layout-main-wrapper{
+		margin: 1rem 0;
+		
+		//
+		// ------------ Home 3 columns cards ------------
+		.views-element-container{
+			
+			//.view-categoria
+			div[class*="view-display-id-page_"]{
+				@include cards-entrada;
+			}
+			
+		}
+		
+	}
+	
+}

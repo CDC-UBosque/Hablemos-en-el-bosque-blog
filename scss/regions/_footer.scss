@@ -1,0 +1,266 @@
+/* ---------------------------------- footer styles -----------------------------
+	------------------------------------------------------------------------------- */
+
+footer,
+footer.site-footer{
+	
+	background: $color_brand;
+	padding: 0;
+	margin-top: 2rem;
+	
+	.container,
+	.container-fluid{
+		
+		//
+		// ------------ Top brand elements  ------------
+		.site-footer__top{
+			width: 100%;
+			float: none;
+			position: relative;
+			@include display-grid;
+			@include grid-parent-3-columns (1fr, 1fr, 1fr);
+			grid-column-gap: 2rem;
+			margin-bottom: 1rem;
+			
+			@media only screen and (max-width: $breakpoint_3){
+				@include grid-parent-2-columns (1fr, 1fr);
+			}
+			
+			@media only screen and (max-width: $breakpoint_4){
+				@include grid-parent-1-columns (1fr);
+			}
+			
+			section{
+				width: initial;
+				padding: 0;
+				
+				.block{
+					border: 0;
+					margin: 0;
+					padding: 0;
+					
+					p{
+						@include footer-p_text ();
+						margin-top: 0;
+					}
+					
+					a{
+						color: $color_brand_white;
+					}
+					
+				}
+				
+			}
+			
+			//
+			// ------------ disclaimer top ------------
+			.region-footer-first{
+				background: $color_footer_disclaimer;
+				justify-content: center;
+				margin-bottom: 2rem;
+				@include bg-laterales($color_footer_disclaimer, $width: 100%);
+				@include grid-child-column (1, 4);
+				@include grid-child-row (1, 2);
+				
+				.mayor-informacion-footer-block{
+					
+					p{
+						margin: 0;
+						padding: 1rem;
+						text-align: center;
+						font-size: $font-general-text;
+						line-height: $font-general-text-line;
+						
+						a{
+							//color: $color-text;
+							
+							&:hover{
+							//	color: $color-text;
+							}
+							
+						}
+						
+					}
+					
+				}
+				
+			}
+			
+			//
+			// ------------ sede bogota  ------------
+			.region-footer-second{
+				
+				@include grid-child-column (1, 2);
+				@include grid-child-row (2, 3);
+				
+				@media only screen and (max-width: $breakpoint_3){
+					@include grid-child-column (1, 2);
+				}
+				
+				.field--name-body{
+					@include display-grid;
+					@include grid-parent-2-columns (3rem, 1fr);
+					
+					h4{
+						margin-bottom: 1rem;
+						@include footer-h4_text ();
+						@include grid-child-column (1, 3);
+						@include grid-child-row (1, 2);
+					}
+					
+					h5{
+						margin-left: 2rem;
+						@include footer-h5_text ();
+						@include grid-child-column (2, 3);
+						@include grid-child-row (2, 3);
+					}
+					
+					p{
+						
+						&:nth-child(3){
+							@include grid-child-column (1, 2);
+							@include grid-child-row (2, 4);
+						}
+						
+						&:last-child{
+							margin-left: 2rem;
+							@include grid-child-column (2, 3);
+							@include grid-child-row (3, 4);
+						}
+						
+					}
+					
+				}
+				
+			}
+			
+			//
+			// ------------ sede chia  ------------
+			.region-footer-third{
+				
+				@include grid-child-column (2, 3);
+				@include grid-child-row (2, 3);
+				
+				@media only screen and (max-width: $breakpoint_3){
+					@include grid-child-column (2, 3);
+				}
+				
+				@media only screen and (max-width: $breakpoint_4){
+					@include grid-child-column (1, 2);
+					@include grid-child-row (3, 4);
+				}
+				
+				.field--name-body{
+					margin-top: 2rem;
+					@include display-grid;
+					@include grid-parent-2-columns (5rem, 1fr);
+					
+					@media only screen and (max-width: $breakpoint_4){
+						margin-top: 0rem;
+						@include grid-parent-2-columns (3rem, 1fr);
+					}
+					
+					h4{
+						margin-bottom: 2rem;
+						@include footer-h4_text ();
+						@include grid-child-column (1, 3);
+						@include grid-child-row (1, 2);
+					}
+					
+					h5{
+						margin-left: 2rem;
+						@include footer-h5_text ();
+						@include grid-child-column (2, 3);
+						@include grid-child-row (2, 3);
+					}
+					
+					p{
+						
+						&:nth-child(2){
+							@include grid-child-column (1, 2);
+							@include grid-child-row (2, 4);
+						}
+						
+						&:last-child{
+							margin-left: 2rem;
+							@include grid-child-column (2, 3);
+							@include grid-child-row (3, 4);
+						}
+						
+					}
+					
+				}
+				
+			}
+			
+			//
+			// ------------ info programa  ------------
+			.region-footer-fourth{
+				
+				@include grid-child-column (3, 4);
+				@include grid-child-row (2, 3);
+				
+				@media only screen and (max-width: $breakpoint_3){
+					@include grid-child-column (1, 3);
+					@include grid-child-row (3, 4);
+				}
+				
+				@media only screen and (max-width: $breakpoint_4){
+					@include grid-child-column (1, 2);
+					@include grid-child-row (4, 5);
+				}
+				
+				.field--name-body{
+					
+					h4{
+						@include footer-h4_text ();
+					}
+					
+					h5{
+						@include footer-h5_text ();
+					}
+					
+					p{
+						
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+		//
+		// ------------ Bottom brand elements  ------------
+		.site-footer__bottom{
+			margin: 0;
+			border: 0;
+			background: $color_brand_white;
+			@include bg-laterales($color_brand_white, $width: 100%);
+			
+			section{
+				margin: 0;
+				
+				.block{
+					margin: 0;
+					
+					.content{
+						padding: 1rem 0;
+						
+						p{
+							@include footer-vigilada_text ();
+							text-align: center;
+							margin: 0;
+						}
+						
+					}
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}

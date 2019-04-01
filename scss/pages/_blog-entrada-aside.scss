@@ -1,0 +1,355 @@
+/* ---------------------------------- Blog entrada -----------------------------
+	------------------------------------------------------------------------------- */
+
+.node--type-blog,
+.layout-sidebar-second{
+	
+	.layout-main-wrapper{
+		
+		#main{
+			
+			>div{
+				
+				// ------------------------------------------
+				// Sidebar section
+				// ------------------------------------------
+				.sidebar{
+					order: initial;
+					flex: initial;
+					-ms-flex: initial;
+					max-width: initial;
+					margin-top: calc( (1 / 1 * (100% + 39rem) ) - 500px );
+					
+					@media only screen and (max-width: $breakpoint_3){
+						margin-top: 0;
+						margin-bottom: 3rem;
+					}
+					
+					.block{
+						border: 0;
+						background: none;
+						padding: 1rem 0;
+					}
+					
+					.cultura-entradas-relacionadas-slider-block,
+					div[class*="block-views-blockcontenido-relacionado-block-"]{
+						border-bottom: 1px solid $color_line_grey_2;
+						padding: 1rem 0 3rem;
+						
+						&:last-child{
+							border-bottom: 0px;
+							padding-bottom: 0;
+						}
+						
+						@media only screen and (max-width: $breakpoint_3){
+							max-width: $breakpoint_4;
+							margin: auto;
+							padding-bottom: 6rem;
+						}
+							
+						.content{
+						
+							.view-contenido-relacionado{
+								
+								.view-header{
+									
+									p{
+										@include titulos-aside-entrada_text ();
+									}
+									
+								}
+								
+								.view-content{
+									
+									.jcarousel-wrapper{
+										width: 100%;
+										margin: 1rem 0 2rem;
+										border: 0;
+										max-width: initial;
+										height: 265px;
+										@include prefix(border-radius, 0, webkit moz);
+										@include prefix(box-shadow, none, webkit moz);
+										
+										@media only screen and (max-width: $breakpoint_3){
+											max-width: 350px;
+											margin: auto;
+										}
+										
+										@media only screen and (max-width: $mobile-l-width){
+											max-width: 300px;
+											margin: auto;
+										}
+										
+										// ------------------------------------------
+										// container
+										// ------------------------------------------
+										.jcarousel-container-horizontal{
+											
+											li{
+												//width: 360px;
+												@include display-grid;
+												@include grid-parent-3-columns (1rem, 1fr, 1rem);
+												
+												@include cards-inside-blog;
+												
+												// ------------------------------------------
+												// Title
+												// ------------------------------------------
+												.views-field-title{
+													margin: -2rem 1rem 0;
+													position: relative;
+													@include grid-child-column (2, 3);
+													@include grid-child-row (2, 2);
+												}	
+												
+												// ------------------------------------------
+												// Imagen
+												// ------------------------------------------
+												.views-field-field-imagen-del-blog{
+													margin: 0;
+													position: relative;
+													@include grid-child-column (1, 4);
+													@include grid-child-row (1, 1);
+													
+													img{
+														@include prefix(box-shadow, none, webkit moz);
+													}
+													
+												}
+												
+												// ------------------------------------------
+												// Ver mas
+												// ------------------------------------------
+												.views-field-view-node{
+													margin: 0 1rem;
+													position: relative;
+													@include grid-child-column (2, 3);
+													@include grid-child-row (3, 3);
+												}
+												
+												// ------------------------------------------
+												// Categoria
+												// ------------------------------------------
+												.views-field-field-categoria{
+													margin: 0 1rem;
+													padding: 0.5rem 1rem 1rem;
+													position: relative;
+													@include grid-child-column (2, 3);
+													@include grid-child-row (4, 4);
+													
+													&:after{
+														position: absolute;
+														content: "";
+														bottom: 0;
+														left: 1rem;
+														right: 1rem;
+														background: $color_line_grey_2;
+														height: 1px;
+													}
+													
+												}
+																					
+											}
+											
+										}
+										
+										// ------------------------------------------
+										// previous and next general button
+										// ------------------------------------------
+										.jcarousel-control-prev,
+										.jcarousel-control-next{
+											bottom: -2.5rem;
+											top: initial;
+											text-shadow: none;
+											width: 15px;
+											height: 25px;
+											@include prefix(border-radius, 0, webkit moz);
+											@include prefix(box-shadow, none, webkit moz);
+											
+											&:after{
+												display: none;
+											}
+											
+											&:hover{
+												opacity: .6;
+											}
+											
+										}
+										
+										// ------------------------------------------
+										// previous button
+										// ------------------------------------------
+										.jcarousel-control-prev{
+											background: url('../images/icons/prev-line.svg');
+											background-repeat: no-repeat;
+											background-size: contain;
+											left: initial;
+											left: calc(50% - 1.5rem);
+										}
+										
+										// ------------------------------------------
+										// next button
+										// ------------------------------------------
+										.jcarousel-control-next{
+											background: url('../images/icons/next-line.svg');
+											background-repeat: no-repeat;
+											background-size: contain;
+											right: calc(50% - 1.5rem);
+										}
+										
+									}
+									
+								}
+								
+							}
+							
+						}
+						
+					}
+					
+					.entradas-relacionadas-ultimas-block{
+						
+						@media only screen and (max-width: $breakpoint_3){
+							max-width: $breakpoint_4;
+							margin: 2rem auto;
+						}
+						
+						.content{
+							
+							.view-contenido-relacionado{
+								
+								.view-header{
+									margin-bottom: 2rem;
+									
+									p{
+										@include titulos-aside-entrada_text ();
+									}
+									
+								}
+								
+								.view-content{
+									
+									.views-row{
+										margin-bottom: 1.5rem;
+										@include display-grid;
+										@include grid-parent-2-columns (8rem, 1fr);
+										
+										&:last-child{
+											margin-bottom: 0;
+										}
+										
+										@include cards-inside-blog;
+										
+										.views-field-field-imagen-del-blog{
+											margin: 0;
+											@include grid-child-column (1, 2);
+											@include grid-child-row (1, 4);
+											
+											img{
+												min-height: 70px;
+												object-fit: cover;
+											}
+											
+										}
+										
+										.views-field-title{
+											margin: 0;
+											padding: 0 .8rem;
+											@include grid-child-column (2, 3);
+											@include grid-child-row (1, 2);
+											
+											.field-content{
+												
+												a{
+													font-size: $font-body-text;
+													line-height: $font-txt-xxl;
+												}
+												
+											}
+											
+										}
+										
+										.views-field-view-node{
+											margin: 0;
+											padding: .3rem .8rem 0;
+											@include grid-child-column (2, 3);
+											@include grid-child-row (2, 3);
+										}
+										
+										.views-field-field-categoria{
+											margin: 0;
+											padding: .3rem .8rem 0;
+											@include grid-child-column (2, 3);
+											@include grid-child-row (3, 4);
+										}
+										
+									}
+									
+								}
+								
+								.view-footer{
+									border-top: 1px solid $color_line_grey_2;
+									margin-top: 2rem;
+									padding-top: 2rem;
+									
+									p{
+										margin: 0;
+										text-align: center;
+										
+										a{
+											@include buton-m-green;
+											
+											&:after{
+												display: none;
+											}
+											
+										}
+										
+									}
+									
+								}
+								
+							}
+							
+							
+						}
+						
+					}
+								
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}
+
+
+/*.layout-sidebar-second{
+	
+	.layout-main-wrapper{
+		
+		#main{
+			
+			>div{
+				
+				// ------------------------------------------
+				// Sidebar section
+				// ------------------------------------------
+				.sidebar{
+					order: 13;
+					flex: 0 0 25%;
+					-ms-flex: 0 0 25%;
+					max-width: 25%;
+					margin-top: initial;
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+}*/

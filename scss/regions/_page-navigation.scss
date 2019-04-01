@@ -1,0 +1,63 @@
+/* ---------------------------------- Page navigation styles -----------------------------
+	------------------------------------------------------------------------------- */
+
+.pagination{
+	
+	justify-content: center;
+	margin-top: 2rem;
+	
+	//
+	// ------------ Page item  ------------
+	.page-item,
+	.pager__item--next{
+		
+		.page-link{
+			color: $color_brand;
+			
+			&:after{
+				display: none;
+			}
+			
+			&:hover{
+				background: $color_brand;
+				color: $color_brand_white;
+				border-color: $color_brand;
+			}
+			
+		}
+		
+	}
+	
+	//
+	// ------------ Page item active ------------
+	.page-item.active{
+		
+		span.page-link{
+			background: $color_brand;
+			border-color: $color_brand;
+			color: $color_brand_white;
+			
+			&:after{
+				display: none;
+			}
+			
+		}
+		
+	}
+	
+}
+
+.more-link{
+	justify-content: center;
+	text-align: center;
+	
+	a{
+		@include buton-m-green;
+		
+		&:after{
+			display: none;
+		}
+		
+	}
+	
+}

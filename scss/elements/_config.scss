@@ -1,0 +1,245 @@
+$mobile: 380px;
+$mobile-medida: 380; //tamaño para calculo
+$tablet-3: 500px;
+$tablet-2: 600px;
+$tablet-1: 700px;
+$tablet: 788px; //768px;
+$tablet-medida: 788; //tamaño para calculo
+$desktop-small: 980px;
+$desktop-medida: 1180; // tamaño descontando padding para calculo
+
+/* ------------------------ calculos bootstrap ------------------------
+------------------------------------------------------------------------ */
+$breakpoint_1: 1199px;
+$breakpoint_2: 991px;
+$breakpoint_3: 768px;
+$breakpoint_4: 500px;
+
+$color_text: #494C4D;
+
+$color_brand:  #7BC142;
+$color_brand_dark: #2B3427;
+$color_brand_dark_15: #D7D8D0;
+$color_brand_dark_20: #446435;
+$color_gray_80: #4A4A4A;
+$color_gray_2: #FBFBFB;
+$color_gray_5: #F7F7F7;
+$color_gray_10: #F2F2F2;
+$color_gray_15: #EDEDED;
+$color_gray_20: #DDDDDD;
+$color_gray_50: #BABCBF;
+$color_gray_60: #9B9B9B;
+$color_brand_orange: #FE8020; // color naranja UEB
+$color_brand_white: #FFFFFF; // color naranja UEB
+$color-font: #4A4A4A;
+$color_light_grey: #F9F9F9;
+$color_line_grey: #979797;
+$color_line_grey_2: #E3E3E3;
+
+$color_footer_disclaimer: #D8D1CA;
+
+$color_facebook: #225c9b;
+$color_twitter: #00acf4;
+$color_in: #0077b4;
+$color_googleplus: #DA4D40;
+
+// ------------------------------------------------------
+// ----------------------- Fonts ----------------------- //
+$font-menu:13px; // menu links
+$font-titles-xl:40px; // general titles
+$font-titles:30px; // general titles
+
+$font-titles-entrada:25px; // font title entrada
+$font-titles-entrada-line:35px; // font title entrada line
+
+$font-destacado-entrada:16px; // font destacado entrada
+$font-destacado-entrada-line:22px; // font destacado entrada line height
+
+$font-destacado-entrada-blog:28px; // font destacado entrada blog
+$font-destacado-entrada-blog-line:32px; // font destacado entrada blog line height
+
+$font-titles-cards:20px; // font title cards
+$font-titles-cards-line:25px; // font title cards line
+
+$font-destacado:17px; // font destacado
+$font-destacado-line:22px; // font destacado line height
+
+$font-body-text:16px; // font for all site
+$font-body-text-line:24px; // font for all site
+
+$font-vigilada:10px; // font for all site
+$font-vigilada-line:12px; // font for all site
+
+$font-footer-1:12px; // font footer h4
+$font-footer-1-line:16px; // font footer h4
+
+$font-general-text:16px; // font general text
+$font-general-text-line:25px; // font general text
+
+$font-subtitles:20px; // general subtitles
+$font-txt-xxl:18px; // buttons
+$font-txt-xl:16px; // breadcumb
+$font-txt-l:14px; // paragraphs large
+$font-txt-m:13px; // box titles 
+$font-txt-s:12px; // entrance titles
+$font-size-buttons-menu-top:14px; // buttons menu top
+
+
+//font brand "acherus grotesque"
+//font brand black
+$font-brandb-xxl: 52px;
+$font-brandb-l: 33px;
+$font-brandb-m: 20px;
+$font-brandb-xs: 11px;
+
+//font brand bold
+$font-bsb-xl: 39px;
+$font-bsb-m: 16px;
+$font-bsb-l: 28px;
+
+//FONT BRAND ULTRA LIGHT
+$font-bl-xl: 39px;
+$font-bl-l: 33px;
+$font-bl-m: 20px;
+$font-bl-s: 17px;
+
+//FONT BASE “LATO”
+//FONT BASE BOLD
+$font-baseb-xs: 10px;
+
+//font base regular
+$font-baser-m: 13px;
+$font-baser-s: 14px;
+$font-baser-xs: 11px;
+
+//FONT BASE SERIF “PT SERIF”
+//FONT BASE SERIF
+$font-serif-s: 14px;
+$font-serif-xs: 12px;
+
+//screen size
+$mobile-l-width: 425px;
+$mobile-m-width: 375px;
+$mobile-s-width: 320px;
+$mobile-width: $mobile-l-width;
+$tablet-width: 768px;
+$tablet-medium-width: 597px;
+$laptop-width: 1024px;
+$desktop-width: 1180px;
+$desktop-width-limit: 1200px;
+
+$mobile-header-height: 47px;
+
+// Algunos elementos tienen background que se extiende fuera del 1180px
+$bg-demasia-width: 100px;
+$base-opacity: .5;
+
+//  media_font_size_varible_depending_resolution(12px,1200px,9px,900px)
+//  |
+//  | en css:
+//  +-> @media (min-width: 1200px) and (max-width: 1100px) { #{$anithing}: 12px; }
+//  +-> @media (min-width: 1100px) and (max-width: 1000px) { #{$anithing}: 10.5px; }
+//  +-> @media (min-width: 1000px) and (max-width: 900px)  { #{$anithing}: 9px; }
+@mixin media_anything_varible_depending_resolution($maxSize,$maxResolution,$minSize,$minResolution,$anithing: 'font-size',$numMediaQueryes: 4)
+{
+  $deltaResolution: ($maxResolution - $minResolution) / $numMediaQueryes; 
+  $deltaFont: ($maxSize - $minSize) / ($numMediaQueryes - 1);
+  @for $i from 1 through $numMediaQueryes
+  {
+    @media (min-width: (($i - 1) * $deltaResolution) + $minResolution) and (max-width: ($i * $deltaResolution) + $minResolution)
+    {
+      #{$anithing}: (($i - 1) * $deltaFont) + $minSize;
+    }
+  }
+}
+
+//  media_font_size_varible_depending_resolution(12px,1200px,9px,900px)
+//  |
+//  | en css:
+//  +-> @media (min-width: 1200px) and (max-width: 1100px) { font-size: 12px; }
+//  +-> @media (min-width: 1100px) and (max-width: 1000px) { font-size: 10.5px; }
+//  +-> @media (min-width: 1000px) and (max-width: 900px)  { font-size: 9px; }
+@mixin media_font_size_varible_depending_resolution($maxSize,$maxResolution,$minSize,$minResolution,$numMediaQueryes: 4)
+{ @include media_anything_varible_depending_resolution($maxSize,$maxResolution,$minSize,$minResolution,'font-size',$numMediaQueryes); }
+@mixin media_line_heght_varible_depending_resolution($maxSize,$maxResolution,$minSize,$minResolution,$numMediaQueryes: 4)
+{ @include media_anything_varible_depending_resolution($maxSize,$maxResolution,$minSize,$minResolution,'line-height',$numMediaQueryes); }
+//  media_height_varible_depending_resolution(12px,1200px,9px,900px)
+//  |
+//  | en css:
+//  +-> @media (min-width: 1200px) and (max-width: 1100px) { height: 12px; }
+//  +-> @media (min-width: 1100px) and (max-width: 1000px) { height: 10.5px; }
+//  +-> @media (min-width: 1000px) and (max-width: 900px)  { height: 9px; }
+@mixin media_height_varible_depending_resolution($maxSize,$maxResolution,$minSize,$minResolution,$numMediaQueryes: 4)
+{ @include media_anything_varible_depending_resolution($maxSize,$maxResolution,$minSize,$minResolution,'height',$numMediaQueryes); }
+
+@mixin Desktop-PageWithMax($addMaxValue: 0px) // Mayor a: $desktop-width: 1180px + 1px;
+{ @media (min-width: $desktop-width + $addMaxValue + 1px) { $col: 20px; @content; } }
+@mixin Desktop-NoLaptop($addMaxValue: 0px) // Mayor a: $laptop-width: 1024px + 1px;
+{ @media (min-width: $laptop-width + $addMaxValue + 1px) { $col: 20px; @content; } }
+@mixin Desktop-NoTablet($addMaxValue: 0px) // Mayor a: $tablet-width: 768px + 1px;
+{ @media (min-width: $tablet-width + $addMaxValue + 1px) { $col: 20px; @content; } }
+@mixin Desktop-NoMobile($addMaxValue: 0px) // Mayor a: $mobile-l-width: 425px + 1px;
+{ @media (min-width: $mobile-l-width + $addMaxValue + 1px) { $col: 20px; @content; } }
+    @mixin Desktop-NoMobileL($addMaxValue: 0px) // Mayor a: $mobile-l-width: 425px + 1px;
+    { @media (min-width: $mobile-l-width + $addMaxValue + 1px) { $col: 20px; @content; } }
+    @mixin Desktop-NoMobileM($addMaxValue: 0px) // Mayor a: $mobile-m-width: 375px + 1px;
+    { @media (min-width: $mobile-m-width + $addMaxValue + 1px) { $col: 20px; @content; } }
+    @mixin Desktop-NoMobileS($addMaxValue: 0px) // Mayor a: $mobile-s-width: 320px + 1px;
+    { @media (min-width: $mobile-s-width + $addMaxValue + 1px) { $col: 20px; @content; } }
+
+@mixin PageWithMax // Menor a: $desktop-width: 1180px;
+{ @media (min-width: 0) and (max-width: $desktop-width) { $col: 20px; @content; } }
+@mixin PageWithMax-NoLaptop // Entre: $desktop-width: 1180px; ý $laptop-width: 1024px + 1px;
+{ @media (min-width: $laptop-width + 1px) and (max-width: $desktop-width) { $col: 20px; @content; } }
+@mixin PageWithMax-NoTablet // Entre: $desktop-width: 1180px; ý $tablet-width: 768px + 1px;
+{ @media (min-width: $tablet-width + 1px) and (max-width: $desktop-width) { $col: 20px; @content; } }
+@mixin PageWithMax-NoMobile // Entre: $desktop-width: 1180px; ý $mobile-l-width: 425px + 1px;
+{ @media (min-width: $mobile-width + 1px) and (max-width: $desktop-width) { $col: 20px; @content; } }
+
+@mixin Laptop($addMinValue: 0px,$addMaxValue: 0px) // Menor a: $laptop-width: 1024px;
+{ @media (min-width: (0 + $addMinValue)) and (max-width: ($laptop-width + $addMaxValue)) { $col: 20px; @content; } }
+@mixin Laptop-NoTablet($addMinValue: 0px,$addMaxValue: 0px) // Entre: $laptop-width: 1024px; ý $tablet-width: 768px + 1px;
+{ @media (min-width: $tablet-width + $addMinValue + 1px) and (max-width: $laptop-width + $addMaxValue) { $col: 20px; @content; } }
+@mixin Laptop-NoMobile($addMinValue: 0px,$addMaxValue: 0px) // Entre: $laptop-width: 1024px; ý $mobile-l-width: 425px + 1px;
+{ @media (min-width: $mobile-width + $addMinValue + 1px) and (max-width: $laptop-width + $addMaxValue) { $col: 20px; @content; } }
+
+@mixin Tablet($addMinValue: 0px,$addMaxValue: 0px) // Menor a: $tablet-width: 768px;
+{ @media (min-width: (0 + $addMinValue)) and (max-width: ($tablet-width + $addMaxValue)) { $col: 15px; @content; } }
+  @mixin TabletMedium($addMinValue: 0px,$addMaxValue: 0px) // Menor a: $tablet-medium-width: 597px;
+  { @media (min-width: (0 + $addMinValue)) and (max-width: ($tablet-medium-width + $addMaxValue)) { $col: 15px; @content; } }
+  @mixin TabletMedium-NoMobile // Entre: $tablet-medium-width: 597px; ý $mobile-l-width: 425px + 1px;
+  { @media (min-width: $mobile-l-width + 1px) and (max-width: $tablet-medium-width) { $col: 15px; @content; } }
+@mixin Tablet-NoMobile // Entre: $tablet-width: 768px; ý $mobile-l-width: 425px + 1px;
+{ @media (min-width: $mobile-l-width + 1px) and (max-width: $tablet-width) { $col: 15px; @content; } }
+
+@mixin Mobile // Menor a: $mobile-l-width: 425px;
+{ @media (min-width: 0) and (max-width: $mobile-l-width) { $col: 10px; @content; } }
+    @mixin MobileL // Menor a: $mobile-l-width: 425px;
+    { @media (min-width: 0) and (max-width: $mobile-l-width - 1px) { @content; } }
+    @mixin MobileM // Menor a: $mobile-m-width: 375px;
+    { @media (min-width: 0) and (max-width: $mobile-m-width - 1px) { @content; } }
+    @mixin MobileS // Menor a: $mobile-s-width: 320px;
+    { @media (min-width: 0) and (max-width: $mobile-s-width - 1px) { @content; } }
+
+
+
+//media query
+@mixin tablet {
+  @media (min-width: 0) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+
+@mixin mobile {
+  @media (min-width: 0) and (max-width: #{$tablet-width - 1px}){
+    @content;
+  }
+}
+
+$images_social_networks: (
+	facebook: 'facebook',
+	instagram: 'instagram',
+	linkedin: 'linkedin',
+	twitter: 'twitter'
+);

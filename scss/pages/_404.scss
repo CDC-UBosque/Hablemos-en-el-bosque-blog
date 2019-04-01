@@ -1,0 +1,46 @@
+/* ---------------------------------- Page 404 -----------------------------
+	------------------------------------------------------------------------------- */
+	
+article[about="/404"]{
+	position: relative;
+	max-width: 31rem;
+    margin: 1rem auto 3rem;
+    text-align: center;
+	
+	h1{
+		font-family: $font-AG-black;
+		font-size: 8rem;
+		line-height: 8rem;
+		color: $color_brand_dark;
+		margin-bottom: 2rem;
+	}
+	
+	h3{
+		font-family: $font-AG-thin;
+	}
+	
+	a{
+		@include buton-s-green;
+		
+		&:after{
+			display: none;
+		}
+		
+	}
+	
+}
+
+.layout-sidebar-second .layout-main-wrapper #main{
+	
+	.error-404{
+	
+		.sidebar{
+			    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+			margin-top: initial;
+		}
+		
+	}
+	
+}

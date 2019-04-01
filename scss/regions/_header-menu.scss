@@ -1,0 +1,120 @@
+/* ---------------------------------- header menu styles -----------------------------
+	------------------------------------------------------------------------------- */
+	
+.header{
+	
+	.navbar#navbar-main{
+		
+		.container{
+			
+			//
+			// ------------ Menu button ------------
+			.navbar-toggler{
+				padding: 0;
+				@include grid-child-column (1, 2);
+				@include grid-child-row (1, 1);
+				
+				@media only screen and (max-width: $breakpoint_4){
+					@include grid-child-column (2, 3);
+					@include grid-child-row (2, 2);
+				}
+				
+				.navbar-toggler-icon{
+					background: url(../images/icons/Menu-burguer.svg);
+					background-repeat: no-repeat;
+					background-size: 28px 24px;
+					height: 1.2em;
+				}
+				
+			}
+			
+			//
+			// ------------ Content menu ------------
+			.navbar-collapse{
+				background: $color_light_grey;
+				position: absolute;
+				z-index: 100;
+				left: 0;
+				right: 0;
+				top: 5rem;
+				
+				@media only screen and (max-width: $breakpoint_4){
+					top: 9rem;
+				}
+				
+				.navbar-form{
+					display: initial;
+					
+					.region-header-form{
+						display: initial;
+						
+						nav{
+							
+							ul{
+								grid-column-gap: 2rem;
+								margin: 0;
+								padding: 0 2rem;
+								justify-items: center;
+								text-align: center;
+								@include display-grid;
+								@include grid-parent-3-columns (1fr, 1fr, 1fr);
+								
+								@media only screen and (max-width: $breakpoint_3){
+									@include grid-parent-2-columns (1fr, 1fr);
+								}
+								
+								@media only screen and (max-width: $breakpoint_4){
+									grid-column-gap: 1rem;
+									padding: 0 1rem;
+									@include grid-parent-2-columns (48%, 48%);
+								}
+								
+								li{
+									list-style-type: none;
+									@include display-grid;
+									@include grid-parent-2-rows (1fr, auto);
+									
+									a{
+										justify-self: center;
+										position: relative;
+										top: -2rem;
+										z-index: 2;
+										@include grid-child-row (2, 2);
+										@include button-menu-header;
+										
+										&:after{
+											display: none;
+										}
+										
+									}
+									
+									.menu_link_content{
+										@include grid-child-row (1, 1);
+										
+										img{
+											width: 100%;
+										}
+										
+									}
+									
+								}
+								
+							}
+							
+						}
+						
+					}
+					
+				}
+				
+			}
+			
+			.navbar-collapse.show{
+				//background: $color_brand_white;
+			}
+			
+		}
+		
+	}
+	
+}

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="31" viewBox="0 0 31 31">
+  <defs>
+    <polygon id="icon-fundadores-a" points=".217 .551 .751 .551 .751 .131 .217 .131"/>
+    <polygon id="icon-fundadores-c" points=".12 .551 20.229 .551 20.229 .131 .12 .131"/>
+    <polygon id="icon-fundadores-e" points=".134 .551 .669 .551 .669 .131 .134 .131"/>
+    <polygon id="icon-fundadores-g" points="0 29.893 30.931 29.893 30.931 .404 0 .404"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <path stroke="#231F20" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5" d="M26.6641155 3.08034821L26.6641155 4.59491964M26.6641155 20.2529643L26.6641155 21.7675357"/>
+    <path stroke="#231F20" stroke-linecap="round" stroke-linejoin="round" stroke-width=".834" d="M13.7373293,6.4569125 L13.745881,6.4569125"/>
+    <path stroke="#231F20" stroke-dasharray=".02 3.907" stroke-linecap="round" stroke-linejoin="round" stroke-width=".834" d="M17.5705862,6.4569125 L23.3467414,6.4569125"/>
+    <path stroke="#231F20" stroke-linecap="round" stroke-linejoin="round" stroke-width=".834" d="M25.2590138 6.4569125L25.2675655 6.4569125M13.7373293 8.52090357L13.745881 8.52090357"/>
+    <path stroke="#231F20" stroke-dasharray=".02 3.907" stroke-linecap="round" stroke-linejoin="round" stroke-width=".834" d="M17.5705862,8.52090357 L23.3467414,8.52090357"/>
+    <path stroke="#231F20" stroke-linecap="round" stroke-linejoin="round" stroke-width=".834" d="M25.2590138 8.52090357L25.2675655 8.52090357M13.7373293 10.5848946L13.745881 10.5848946"/>
+    <path stroke="#231F20" stroke-dasharray=".02 3.907" stroke-linecap="round" stroke-linejoin="round" stroke-width=".834" d="M17.5705862,10.5848946 L23.3467414,10.5848946"/>
+    <path stroke="#231F20" stroke-linecap="round" stroke-linejoin="round" stroke-width=".834" d="M25.2590138 10.5848946L25.2675655 10.5848946M13.7373293 12.6488857L13.745881 12.6488857"/>
+    <path stroke="#231F20" stroke-dasharray=".02 3.907" stroke-linecap="round" stroke-linejoin="round" stroke-width=".834" d="M17.5705862,12.6488857 L23.3467414,12.6488857"/>
+    <path stroke="#231F20" stroke-linecap="round" stroke-linejoin="round" stroke-width=".834" d="M25.2590138 12.6488857L25.2675655 12.6488857M13.7373293 14.7128768L13.745881 14.7128768"/>
+    <path stroke="#231F20" stroke-dasharray=".02 3.907" stroke-linecap="round" stroke-linejoin="round" stroke-width=".834" d="M17.5705862,14.7128768 L23.3467414,14.7128768"/>
+    <path stroke="#231F20" stroke-linecap="round" stroke-linejoin="round" stroke-width=".834" d="M25.2590138 14.7128768L25.2675655 14.7128768M13.7373293 16.777975L13.745881 16.777975"/>
+    <path stroke="#231F20" stroke-dasharray=".02 3.907" stroke-linecap="round" stroke-linejoin="round" stroke-width=".834" d="M17.5705862,16.777975 L23.3467414,16.777975"/>
+    <path stroke="#231F20" stroke-linecap="round" stroke-linejoin="round" stroke-width=".834" d="M25.2590138 16.777975L25.2675655 16.777975M13.7373293 18.8419661L13.745881 18.8419661"/>
+    <path stroke="#231F20" stroke-dasharray=".02 3.907" stroke-linecap="round" stroke-linejoin="round" stroke-width=".834" d="M17.5705862,18.8414125 L23.3467414,18.8408589"/>
+    <path stroke="#231F20" stroke-linecap="round" stroke-linejoin="round" stroke-width=".834" d="M25.2590138,18.8409143 L25.2675655,18.8409143"/>
+    <polygon stroke="#231F20" stroke-linecap="round" stroke-linejoin="round" stroke-width=".626" points="11.575 20.253 27.429 20.253 27.429 4.711 11.575 4.711"/>
+    <path stroke="#231F20" stroke-linecap="round" stroke-linejoin="round" stroke-width=".626" d="M6.13452586 19.416075L11.5755603 19.416075M6.13452586 12.809975L11.5755603 12.809975M6.13452586 6.203875L11.5755603 6.203875"/>
+    <polyline stroke="#231F20" stroke-linecap="round" stroke-linejoin="round" stroke-width=".626" points="11.575 27.676 11.575 21.768 27.429 21.768 27.429 27.676"/>
+    <path stroke="#231F20" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5" d="M12.292569 20.2529643L12.292569 21.7675357M12.292569 3.08034821L12.292569 4.59491964"/>
+    <path stroke="#231F20" stroke-linecap="round" stroke-linejoin="round" stroke-width=".626" d="M26.5847983,3.08034821 L12.4199362,3.08034821"/>
+    <path stroke="#231F20" stroke-dasharray=".017 3.531" stroke-linecap="round" stroke-linejoin="round" stroke-width=".834" d="M13.1360362,0.976333929 L26.0293638,0.976333929"/>
+    <path stroke="#231F20" stroke-linecap="round" stroke-linejoin="round" stroke-width=".626" d="M6.13452586,26.1465071 L6.13452586,6.20409643"/>
+    <g transform="translate(0 .15)">
+      <polygon stroke="#231F20" stroke-linecap="round" stroke-linejoin="round" stroke-width=".626" points=".306 2.93 11.428 2.93"/>
+      <path stroke="#231F20" stroke-linecap="round" stroke-linejoin="round" stroke-width=".626" d="M.306365517 16.02545L5.53200345 16.02545M24.6671276 27.5261179L30.6244724 27.5261179M.306365517 27.5261179L13.3659172 27.5261179"/>
+      <g transform="translate(2.138 29.34)">
+        <mask id="icon-fundadores-b" fill="#fff">
+          <use xlink:href="#icon-fundadores-a"/>
+        </mask>
+        <path stroke="#231F20" stroke-linecap="round" stroke-linejoin="round" stroke-width=".834" d="M0.216625862,0.130808929 L0.225177586,0.130808929" mask="url(#icon-fundadores-b)"/>
+      </g>
+      <g transform="translate(5.88 29.34)">
+        <mask id="icon-fundadores-d" fill="#fff">
+          <use xlink:href="#icon-fundadores-c"/>
+        </mask>
+        <path stroke="#231F20" stroke-dasharray=".019 3.715" stroke-linecap="round" stroke-linejoin="round" stroke-width=".834" d="M0.120044828,0.130808929 L20.2294241,0.130808929" mask="url(#icon-fundadores-d)"/>
+      </g>
+      <g transform="translate(27.793 29.34)">
+        <mask id="icon-fundadores-f" fill="#fff">
+          <use xlink:href="#icon-fundadores-e"/>
+        </mask>
+        <path stroke="#231F20" stroke-linecap="round" stroke-linejoin="round" stroke-width=".834" d="M0.134155172,0.130808929 L0.142706897,0.130808929" mask="url(#icon-fundadores-f)"/>
+      </g>
+      <mask id="icon-fundadores-h" fill="#fff">
+        <use xlink:href="#icon-fundadores-g"/>
+      </mask>
+      <polygon stroke="#231F20" stroke-width=".546" points="3.501 27.762 7.562 27.762 7.562 25.99 3.501 25.99" mask="url(#icon-fundadores-h)"/>
+    </g>
+  </g>
+</svg>

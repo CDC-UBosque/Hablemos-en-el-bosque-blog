@@ -1,0 +1,28 @@
+// ------------------------------------ Global elements ------------------------------------ 
+//@import 'elements/_bootstrap';
+@import 'elements/_mixins';
+@import 'elements/_config';
+@import 'elements/_fonts';
+@import 'elements/_artifacts';
+@import 'elements/_animate';
+@import 'elements/_base';
+@import 'elements/_video';
+@import 'elements/_gallery';
+
+// ------------------------------------ Regions (footer, header, menus, etc) ------------------------------------ 
+@import 'regions/_header';
+@import 'regions/_header-logo';
+@import 'regions/_header-menu';
+@import 'regions/_header-search-block';
+@import 'regions/_menu-overlay';
+@import 'regions/_page-navigation';
+@import 'regions/_footer';
+
+// ------------------------------------ Pages ------------------------------------ 
+@import 'pages/_home-banner';
+@import 'pages/_home';
+@import 'pages/_categorias-banner';
+@import 'pages/_categorias';
+@import 'pages/_blog-entrada';
+@import 'pages/_blog-entrada-aside';
+@import 'pages/_404';
